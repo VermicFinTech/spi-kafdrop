@@ -28,6 +28,6 @@ jobs:
       run: ./gradlew build
 
     - name: Publish to repository
-      run: ./gradlew --rerun-tasks publish
+      run: ./gradlew --rerun-tasks publishAllPublicationsToGitHubPackagesRepository
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
