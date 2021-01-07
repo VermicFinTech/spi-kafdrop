@@ -27,7 +27,7 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
 
-    - name: Build with Gradle
-      run: ./gradlew publish
+    - name: Publish to repository
+      run: ./gradlew --rerun-tasks publish
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
