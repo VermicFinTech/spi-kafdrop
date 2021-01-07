@@ -2,8 +2,10 @@ plugins {
     id 'java'
 }
 
-group 'org.example'
+apply plugin: "maven"
+group 'se.vermiculus'
 version '1.0-SNAPSHOT'
+
 
 repositories {
     mavenCentral()
