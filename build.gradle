@@ -16,11 +16,6 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 }
 
-java {
-    withSourcesJar()
-    withJavadocJar()
-}
-
 tasks.named('jar') {
     manifest {
         attributes('Implementation-Title': project.name,
@@ -30,8 +25,11 @@ tasks.named('jar') {
 
 publishing {
     publications {
-        maven(MavenPublication) {
+        mavenJar(MavenPublication) {
+            from components.java
+
             artifactId = 'spi-kafdrop'
+
         }
     }
 
